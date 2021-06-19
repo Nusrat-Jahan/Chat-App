@@ -8,7 +8,6 @@ export default class Start extends React.Component {
     this.state = {
       name: '',
       backgroundColor: '',
-      backColor: '',
     };
   }
   // onPressChat = (name, imgBackground) => {
@@ -27,11 +26,9 @@ export default class Start extends React.Component {
         <View style={styles.main}>
           <Text style={styles.title}>Let's Chat</Text>
         </View>
-        {/* <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}> */}
-        <View style={styles.chatOptions}>
 
+        <View style={styles.chatOptions}>
           <TextInput
-            // style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
             style={styles.nameInput}
             onChangeText={(name) => this.setState({ name })}
             value={this.state.name}
@@ -44,19 +41,19 @@ export default class Start extends React.Component {
             </Text>
             <View style={styles.chatBackgroundColour}>
               <TouchableOpacity
-                style={styles.chatBackgroundColour1}
+                style={styles.backgroundColour1}
                 onPress={(color) => this.setState({ backgroundColor: "#090C08" })}
               />
               <TouchableOpacity
-                style={styles.chatBackgroundColour2}
+                style={styles.backgroundColour2}
                 onPress={(color) => this.setState({ backgroundColor: "#474056" })}
               />
               <TouchableOpacity
-                style={styles.chatBackgroundColour3}
+                style={styles.backgroundColour3}
                 onPress={(color) => this.setState({ backgroundColor: "#8A95A5" })}
               />
               <TouchableOpacity
-                style={styles.chatBackgroundColour4}
+                style={styles.backgroundColour4}
                 onPress={(color) => this.setState({ backgroundColor: "#B9C6AE" })}
               />
             </View>
@@ -151,7 +148,7 @@ const styles = StyleSheet.create({
     marginBottom: 30,
   },
 
-  chatBackgroundColour1: {
+  backgroundColour1: {
     backgroundColor: "#090C08",
     width: 50,
     width: 50,
@@ -160,7 +157,7 @@ const styles = StyleSheet.create({
     margin: 10,
   },
 
-  chatBackgroundColour2: {
+  backgroundColour2: {
     backgroundColor: "#474056",
     width: 50,
     width: 50,
@@ -169,7 +166,7 @@ const styles = StyleSheet.create({
     margin: 10,
   },
 
-  chatBackgroundColour3: {
+  backgroundColour3: {
     backgroundColor: "#8A95A5",
     width: 50,
     width: 50,
@@ -178,7 +175,7 @@ const styles = StyleSheet.create({
     margin: 10,
   },
 
-  chatBackgroundColour4: {
+  backgroundColour4: {
     backgroundColor: "#B9C6AE",
     width: 50,
     width: 50,
@@ -196,109 +193,3 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
 })
-
-// import React from 'react';
-// import {
-//   ImageBackground,
-//   StyleSheet,
-//   Alert,
-//   TextInput, KeyboardAvoidingView,
-//   Text,
-//   View, Platform,
-// } from 'react-native';
-// import { TouchableOpacity } from "react-native-gesture-handler";
-
-
-// // const image = require('../assets/background-image.png');
-
-// export default class Start extends React.Component {
-//   constructor(props) {
-//     super(props),
-//       this.state = {
-//         backgroundColor: "",
-//         name: "",
-//       }
-//   }
-
-//   onPressChat = (name, backgroundColor) => {
-//     if (name == "") {
-//       console.log(name);
-//       return Alert.alert('Please Enter a Name .');
-//     }
-//     this.props.navigation.navigate("Chat", {
-//       name: `${name}`,
-//       backgroundColor: `${backgroundColor}`,
-//     });
-//   };
-
-//   render() {
-//     return (
-//       <ImageBackground source={require('../assets/Background-Image.png')} >
-
-
-//         <Text >Chat Time</Text>
-//         <View >
-//           <TextInput
-//             onChangeText={(name) => this.setState({ name })}
-//             value={this.state.name}
-//             placeHolder='choose a name.'
-//           >
-//           </TextInput>
-//           <View >
-//             <Text >
-//               Choose Background Color:
-//             </Text>
-//             <View >
-//               <TouchableOpacity accessible={true}
-//                 accessibilityLabel="More options"
-//                 accessibilityHint="Lets you choose the color chatinterface."
-//                 onPress={() => this.setState({ backgroundColor: "#090C08" })}
-//               >
-//               </TouchableOpacity>
-
-//               <TouchableOpacity
-//                 accessible={true}
-//                 accessibilityLabel="More options"
-//                 accessibilityHint="Lets you choose the color chatinterface."
-//                 onPress={() => this.setState({ backgroundColor: "#474056" })}
-//               >
-//               </TouchableOpacity>
-
-//               <TouchableOpacity
-//                 accessible={true}
-//                 accessibilityLabel="More options"
-//                 accessibilityHint="Lets you choose the color chatinterface."
-//                 onPress={() => this.setState({ backgroundColor: "#8A95A5" })}
-//               >
-//               </TouchableOpacity>
-
-//               <TouchableOpacity
-//                 accessible={true}
-//                 accessibilityLabel="More options"
-//                 accessibilityHint="Lets you choose the color chatinterface."
-//                 onPress={() => this.setState({ backgroundColor: "#B9C6AE" })}
-//               ></TouchableOpacity>
-//             </View>
-//           </View>
-
-
-//           <TouchableOpacity
-//             accessible={true}
-//             accessibilityLabel='Start Chatting'
-//             accessibilityHint='Let you start chatting'
-
-//             onPress={() => this.onPressChat(this.state.name, this.state.backgroundColor)}
-//           >
-//             <Text >Start Chatting</Text>
-//           </TouchableOpacity>
-
-
-
-//           {Platform.OS === 'android' ? <KeyboardAvoidingView behavior="height" /> : null
-//           }
-
-//         </View>
-//       </ImageBackground>
-//     )
-//   }
-// }
