@@ -32,6 +32,7 @@ export default class App extends React.Component {
   render() {
     return (
       <NavigationContainer>
+        {/* the first screen to load upon starting your app */}
         <Stack.Navigator
           initialRouteName="Start"
         >
