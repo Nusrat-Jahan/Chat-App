@@ -9,7 +9,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16e3e2f2-2341-4826-a877-141b7fed98a9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Chat.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
@@ -89,10 +90,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="95" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1624122625667" />
-    <state x="93" y="93" width="1094" height="494" key="AVDManager" timestamp="1624124006277">
+    <state x="93" y="93" width="1094" height="494" key="AVDManager" timestamp="1624358528536">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="93" y="93" width="1094" height="494" key="AVDManager/0.0.1280.680@0.0.1280.680" timestamp="1624124006277" />
+    <state x="93" y="93" width="1094" height="494" key="AVDManager/0.0.1280.680@0.0.1280.680" timestamp="1624358528536" />
     <state x="149" y="0" key="SettingsEditor" timestamp="1624124229174">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
