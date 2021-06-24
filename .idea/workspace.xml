@@ -29,7 +29,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ShoppingList" />
     <property name="settings.editor.selected.configurable" value="configurable.group.other" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -90,10 +90,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="95" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1624122625667" />
-    <state x="93" y="93" width="1094" height="494" key="AVDManager" timestamp="1624358528536">
+    <state x="93" y="93" width="1094" height="494" key="AVDManager" timestamp="1624552690556">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="93" y="93" width="1094" height="494" key="AVDManager/0.0.1280.680@0.0.1280.680" timestamp="1624358528536" />
+    <state x="93" y="93" width="1094" height="494" key="AVDManager/0.0.1280.680@0.0.1280.680" timestamp="1624552690555" />
+    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1624530099113">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1624530099113" />
     <state x="149" y="0" key="SettingsEditor" timestamp="1624124229174">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
