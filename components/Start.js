@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, Text, Button, TextInput, ImageBackground, StyleSheet, TouchableOpacity, Alert } from 'react-native';
 
-
 export default class Start extends React.Component {
   constructor(props) {
     super(props);
@@ -19,6 +18,7 @@ export default class Start extends React.Component {
       backgroundColor: this.state.backgroundColor,
     });
   };
+
   render() {
     return (
       <ImageBackground source={require('../assets/Background-Image.png')} style={styles.imgBackground}>
@@ -79,12 +79,6 @@ export default class Start extends React.Component {
               accessibilityRole="button"
               color="#757083"
               title="Start Chat"
-              // onPress={() =>
-              //   this.props.navigation.navigate("Chat", {
-              //     name: this.state.name,
-              //     backgroundColor: this.state.backgroundColor,
-              //   })
-              // }
               onPress={() => this.onPressChat(this.state.name, this.state.backgroundColor)}
             />
           </View>
@@ -93,6 +87,8 @@ export default class Start extends React.Component {
     )
   }
 }
+
+// Added styles here 
 const styles = StyleSheet.create({
   container: {
     flex: 1,

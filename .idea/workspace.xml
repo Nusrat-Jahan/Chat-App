@@ -10,6 +10,7 @@
   <component name="ChangeListManager">
     <list default="true" id="16e3e2f2-2341-4826-a877-141b7fed98a9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/CustomActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/CustomActions.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,10 +88,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="95" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1624122625667" />
-    <state x="173" y="114" width="1094" height="494" key="AVDManager" timestamp="1625006067093">
+    <state x="173" y="114" width="1094" height="494" key="AVDManager" timestamp="1625223141587">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="173" y="114" width="1094" height="494" key="AVDManager/0.0.1280.680@0.0.1280.680" timestamp="1625006067093" />
+    <state x="173" y="114" width="1094" height="494" key="AVDManager/0.0.1280.680@0.0.1280.680" timestamp="1625223141587" />
     <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1625072423774">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

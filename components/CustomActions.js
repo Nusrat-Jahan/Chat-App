@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import * as Permissions from 'expo-permissions';
 import * as ImagePicker from 'expo-image-picker';
-import { Camera } from "expo-camera";
 import * as Location from 'expo-location';
 import firebase from 'firebase';
 import 'firebase/firestore';
@@ -99,8 +98,6 @@ export default class CustomActions extends Component {
         // Gets user's current location
         const result = await Location.getCurrentPositionAsync({}
         ).catch((error) => console.log(error));
-        const longitude = JSON.stringify(result.coords.longitude);
-        const latitude = JSON.stringify(result.coords.latitude);
         if (result) {
           this.props.onSend({
             location: {

@@ -3,7 +3,6 @@ import { View, Text, Button, Platform, KeyboardAvoidingView } from 'react-native
 //Gifted Chat library
 import { GiftedChat, Bubble, InputToolbar } from 'react-native-gifted-chat';
 import CustomActions from './CustomActions';
-// import AsyncStorage from '@react-native-community/async-storage';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import NetInfo from '@react-native-community/netinfo';
 import MapView from 'react-native-maps';
@@ -48,7 +47,6 @@ export default class Chat extends React.Component {
     // Added name to the text message
     let name = this.props.route.params.name;
     this.props.navigation.setOptions({ title: name });
-    // this.referenceChatMessages = firebase.firestore().collection("messages");
     this.getMessages();
     NetInfo.fetch().then(connection => {
       if (connection.isConnected) {
@@ -67,7 +65,6 @@ export default class Chat extends React.Component {
             },
             messages: [],
           });
-          // this.referenceChatMessages = firebase.firestore().collection("messages");
 
           this.unsubscribe = this.referenceChatMessages
             .orderBy("createdAt", "desc")
@@ -111,6 +108,7 @@ export default class Chat extends React.Component {
     });
   }
 
+  // save messages to Firestore database
   addMessage() {
     const message = this.state.messages[0];
     // add a new list to the collection
@@ -159,8 +157,6 @@ export default class Chat extends React.Component {
       console.log(error.message);
     }
   }
-
-
 
   // when a user sends a message, Gifted chat custom function onSend() is called 
   onSend(messages = []) {
@@ -242,9 +238,6 @@ export default class Chat extends React.Component {
           renderActions={this.renderCustomActions}
           renderCustomView={this.renderCustomView}
           onSend={messages => this.onSend(messages)}
-          // user={{
-          //   _id: 1,
-          // }}
           user={this.state.user}
         />
         {Platform.OS === "android" ? (
