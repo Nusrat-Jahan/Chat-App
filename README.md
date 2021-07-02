@@ -22,4 +22,40 @@ To build a chat app for mobile devices using React Native. The app will provide 
 * Images stored in Firebase Cloud Storage
 * Read and send the user’s location data.
 
-## How to Run
+## Libraries
+* React Native
+* Expo
+* Google Firestore
+* Gifted Chat library
+
+## Getting started
+
+### What you need
+- Node.js
+- Expo Command Line Interface
+```
+npm install expo-cli --global
+```
+- Expo account: To create expo an account go to [Expo signup page](https://expo.io/signup)
+- To run the app on your mobile device: the Expo mobile app from your device's app store
+- To run the app on your machine via a simulator/emulator: 
+     - [Android Studio](https://docs.expo.io/workflow/android-studio-emulator/)
+     - [iOS Simulator](https://docs.expo.io/workflow/ios-simulator/) (MacOS only)
+
+### Set Up
+Install dependencies
+```
+npm install
+```
+
+### Required Libraries
+
+To install all dependencies you can run:
+```
+npm i --save @react-native-community/async-storage @react-native-community/masked-view @react-native-community/netinfo @react-navigation/native @react-navigation/stack babel-preset-env better-docs expo expo-font expo-image-picker expo-location expo-permissions expo-updates firebase fsevents prop-types react react-dom react-google-maps react-native react-native-gesture-handler react-native-gifted-chat react-native-keyboard-spacer react-native-maps react-native-parsed-text react-native-reanimated react-native-safe-area-context react-native-screens react-native-svg react-native-web react-native-web-maps react-navigaion react-navigation-stack
+```
+### Run the App
+
+```
+expo start
+```
