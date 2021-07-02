@@ -10,9 +10,6 @@
   <component name="ChangeListManager">
     <list default="true" id="16e3e2f2-2341-4826-a877-141b7fed98a9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Chat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +26,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ShoppingList" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hello-communication-features" />
     <property name="settings.editor.selected.configurable" value="configurable.group.other" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -90,14 +87,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="95" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1624122625667" />
-    <state x="93" y="93" width="1094" height="494" key="AVDManager" timestamp="1625001369815">
+    <state x="173" y="114" width="1094" height="494" key="AVDManager" timestamp="1625006067093">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="93" y="93" width="1094" height="494" key="AVDManager/0.0.1280.680@0.0.1280.680" timestamp="1625001369815" />
-    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1624530099113">
+    <state x="173" y="114" width="1094" height="494" key="AVDManager/0.0.1280.680@0.0.1280.680" timestamp="1625006067093" />
+    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1625072423774">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1624530099113" />
+    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1625072423774" />
     <state x="149" y="0" key="SettingsEditor" timestamp="1624124229174">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

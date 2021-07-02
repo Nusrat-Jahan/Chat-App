@@ -10,7 +10,6 @@ import MapView from 'react-native-maps';
 const firebase = require('firebase');
 require('firebase/firestore');
 
-
 // The application’s main Chat component that renders the chat UI
 export default class Chat extends React.Component {
   constructor() {
