@@ -2,9 +2,11 @@ import React from 'react';
 import { View, Text, Button, Platform, KeyboardAvoidingView } from 'react-native';
 //Gifted Chat library
 import { GiftedChat, Bubble, InputToolbar } from 'react-native-gifted-chat';
+import CustomActions from './CustomActions';
 // import AsyncStorage from '@react-native-community/async-storage';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import NetInfo from '@react-native-community/netinfo';
+import MapView from 'react-native-maps';
 const firebase = require('firebase');
 require('firebase/firestore');
 
@@ -19,7 +21,10 @@ export default class Chat extends React.Component {
       user: {
         _id: '',
         name: '',
+        avatar: '',
       },
+      isConnected: false,
+      image: null,
     };
 
     const firebaseConfig = {
@@ -59,6 +64,7 @@ export default class Chat extends React.Component {
             user: {
               _id: user.uid,
               name: name,
+              avatar: 'https://placeimg.com/140/140/any',
             },
             messages: [],
           });
@@ -69,8 +75,8 @@ export default class Chat extends React.Component {
             .onSnapshot(this.onCollectionUpdate);
         });
       } else {
-        this.setState({ isConnected: false });
         console.log('offline');
+        this.setState({ isConnected: false });
         this.getMessages();
       }
     });
@@ -89,13 +95,16 @@ export default class Chat extends React.Component {
       let data = doc.data();
       messages.push({
         _id: data._id,
-        text: data.text,
+        text: data.text || "",
         createdAt: data.createdAt.toDate(),
         // user: data.user,
         user: {
           _id: data.user._id,
           name: data.user.name,
+          avatar: data.user.avatar,
         },
+        image: data.image || null,
+        location: data.location || null,
       });
     });
     this.setState({
@@ -108,10 +117,12 @@ export default class Chat extends React.Component {
     // add a new list to the collection
     this.referenceChatMessages.add({
       _id: message._id,
-      text: message.text,
+      text: message.text || "",
       createdAt: message.createdAt,
       user: message.user,
       uid: this.state.uid,
+      image: message.image || null,
+      location: message.location || null,
     });
   }
 
@@ -164,6 +175,8 @@ export default class Chat extends React.Component {
       }
     );
   }
+
+  // makes the toolbar disappear when one is offline
   renderInputToolbar(props) {
     if (this.state.isConnected == false) {
     } else {
@@ -174,6 +187,7 @@ export default class Chat extends React.Component {
       );
     }
   }
+
   // Changing the color of the message bubble to black
   renderBubble(props) {
     return (
@@ -188,6 +202,34 @@ export default class Chat extends React.Component {
     )
   }
 
+  // renderCustomActions function is responsible for creating the circle button
+  renderCustomActions = (props) => {
+    return <CustomActions {...props} />;
+  };
+
+  renderCustomView(props) {
+    const { currentMessage } = props;
+    if (currentMessage.location) {
+      return (
+        <MapView
+          style={{
+            width: 150,
+            height: 100,
+            borderRadius: 13,
+            margin: 3
+          }}
+          region={{
+            latitude: currentMessage.location.latitude,
+            longitude: currentMessage.location.longitude,
+            latitudeDelta: 0.0922,
+            longitudeDelta: 0.0421,
+          }}
+        />
+      );
+    }
+    return null;
+  }
+
   render() {
     let name = this.props.route.params.name;
     // this.props.navigation.setOptions({ title: name });
@@ -195,9 +237,11 @@ export default class Chat extends React.Component {
     return (
       <View style={{ flex: 1, backgroundColor: backgroundColor }}>
         <GiftedChat
+          messages={this.state.messages}
           renderBubble={this.renderBubble.bind(this)}
           renderInputToolbar={this.renderInputToolbar.bind(this)}
-          messages={this.state.messages}
+          renderActions={this.renderCustomActions}
+          renderCustomView={this.renderCustomView}
           onSend={messages => this.onSend(messages)}
           // user={{
           //   _id: 1,
