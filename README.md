@@ -1,6 +1,6 @@
 # Chat App
 
-![Chat-App-start-interface](https://user-images.githubusercontent.com/23428563/124265491-098ec300-db36-11eb-97fc-0c4ce73ca8c8.jpeg) {:height="100px" width="50px"}
+![Chat-App-start-interface1](https://user-images.githubusercontent.com/23428563/124267306-5e333d80-db38-11eb-8d5e-9155c0bd5f03.jpeg)
 
 ## Project Objective:
 
